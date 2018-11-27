@@ -1,0 +1,63 @@
+4.1
+    Pclass)
+        First class more people survived than not
+        Second class about the same number survived as died (but more died)
+        Third class much more people died than survived
+        Ratio of dead:survive increased as class number increased
+    Sex)
+        Sex0 much more survived than died
+        Sex1 much more died than survived
+    Age)
+        Most of the passengers were aged 20-40
+        The only age range that had more survive than die was ages 0-10
+        Otherwise, the ratio of dead:survived was only near or under 1 for those
+        aged under 20 or over 50
+    Sibsp)
+        Those who had no siblings/spouse on board were much more likely to die
+        If the unit size was too large, the member of the unit was likely to die
+        as well
+        Sweet spot for survival was having 1-2 siblings or spouse
+    Parch)
+        Again, like Sibsp, those with no parents/children or those with too many
+        parents/children were the most likely to die
+        Sweet spot for survival was having 1-3 parents/children
+    Fare)
+        Generally, the higher the fare you paid, the more likely it was that the
+        passenger survived
+    Embarked)
+        Those who embarked from port0 were more likely to survive than note
+        Both port1 and port2 embarkers had a high dead:survived ratio
+4.2
+b)  I obtained the correct training error of 0.485 as per the project spec. I notice that this error is higher than what is computed using the majority vote.
+
+c)  The training error I got for the DecisionTreeClassifier is 0.014
+
+d)  The training error I got for the KNeighborsClassifier for k = 3 is 0.167
+    The training error I got for the KNeighborsClassifier for k = 5 is 0.201
+    The training error I got for the KNeighborsClassifier for k = 7 is 0.240
+
+e)  Below is the training and testing error of each of the classifiers
+Investigating various classifiers...
+Classifying using Majority Vote...
+	-- training error: 0.404
+	-- testing error: 0.407
+Classifying using Random...
+	-- training error: 0.489
+	-- testing error: 0.487
+Classifying using Decision Tree...
+	-- training error: 0.012
+	-- testing error: 0.241
+Classifying using k-Nearest Neighbors...
+	-- training error: 0.212
+	-- testing error: 0.315
+
+f)  The value k = 7 yields the least error. I also noticed that the error decreased when increasing k up to 7, but generally rises after that value.
+
+g)  A value of depth 3 to 5 is the ideal depth for the decision tree. I notice that in the graph the test error is the lowest between these points before it starts to suffer from overfitting.
+
+h) The optimal depth and k I used for this part is 4 and 7 respectively.
+
+I notice that the overall error for the DecisionTreeClassifier is lower than the error for the KNeighborsClassifier.
+Additionally, I noticed as the training size increased the DecisionTreeClassifier training and test error converged. This is logically sound because, with a greater training size, the model will have more trouble distinguishing a label from a larger training set, thus resulting in an increased training error. However, it can create a more accurate prediction on a wider range of test data when its training set is larger.
+
+The KNeighborsClassifier tended to improve its performance for both training and testing when the training set was increased. I infer that this is because, with more sample points in the space, the KNeighborsClassifier is able to make a more resolving prediction from its neighbors.

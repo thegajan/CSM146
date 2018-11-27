@@ -1,0 +1,42 @@
+4a.
+  I noticed that, for the training data, a function could easily be found to fit the data. On the other hand, linear regression should prove relatively ineffective for the test data. Looking at the test data, I noticed that the trend between the data points is not strong.
+
+4b.
+  I did it
+
+4c.
+  I did it
+
+4d.
+1) correct return
+2) Stops after 765 iterations
+3)step     iterations  cost                   coefficients
+  10^-4     10000       4.086397036795765      [ 2.27044798 -2.46064834]
+  10^-3     7021        3.9125764057919437     [ 2.4464068 -2.816353 ]
+  10^-2     765         3.9125764057914862     [ 2.44640703 -2.81635347]
+  .0407     10000       2.7109165200143816e+39 [-9.40470931e+18 -4.65229095e+18]
+
+4e.
+The closed form solution is [ 2.44640709 -2.81635359]. The cost of the closed form solution is 3.9125764057914636. This is very similar to that of GD. The coefficients are also similar to those obtained through GD with a step of 10^-3 and 10^-2. The algorithm runs much faster than GD. When we run the code, we can see that because there are no iterations done, the code executes instantly.
+
+4f.
+number of iterations: 10000
+[ 2.27040913 -2.4605698 ]
+4.086473801917579
+The algorithm converges in 10000 iterations.
+
+4g.
+I did that shit.
+
+4f.
+I want to use RMSE when calculating error because it allows me to measure on the same scale with the same units as y.
+
+4g.
+I did it.
+
+4h.
+I did it.
+
+4i.
+Degree 5 best fits the data because that is where the test RMSE was the lowest at a value of 0.35.
+The training RMSE continued to lower as the polynomial degree was raised while the test RMSE lowered until degree 5 and rose after that (rapidly after degree 8). Since the two diverged in such a fashion, this clearly indicates that the model was overfit to the training data at polynomial degrees above 5.

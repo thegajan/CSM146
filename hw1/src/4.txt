@@ -1,0 +1,52 @@
+4.1
+    Pclass)
+        First class more people survived than not
+        Second class about the same number survived as died (but more died)
+        Third class much more people died than survived
+        Ratio of dead:survive increased as class number increased
+    Sex)
+        Sex0 much more survived than died
+        Sex1 much more died than survived
+    Age)
+        Most of the passengers were aged 20-40
+        The only age range that had more survive than die was ages 0-10
+        Otherwise, the ratio of dead:survived was only near or under 1 for those
+        aged under 20 or over 50
+    Sibsp)
+        Those who had no siblings/spouse on board were much more likely to die
+        If the unit size was too large, the member of the unit was likely to die
+        as well
+        Sweet spot for survival was having 1-2 siblings or spouse
+    Parch)
+        Again, like Sibsp, those with no parents/children or those with too many
+        parents/children were the most likely to die
+        Sweet spot for survival was having 1-3 parents/children
+    Fare)
+        Generally, the higher the fare you paid, the more likely it was that the
+        passenger survived
+    Embarked)
+        Those who embarked from port0 were more likely to survive than note
+        Both port1 and port2 embarkers had a high dead:survived ratio
+4.2
+b)  I obtained the correct training error of 0.485 as per the project spec. I notice that this error is higher than what is computed using the majority vote.
+
+c)  The training error I got for the DecisionTreeClassifier is 0.014
+
+d)  The training error I got for the KNeighborsClassifier for k = 3 is 0.167
+    The training error I got for the KNeighborsClassifier for k = 5 is 0.201
+    The training error I got for the KNeighborsClassifier for k = 7 is 0.240
+
+e)  Below is the training and testing error of each of the classifiers
+Investigating various classifiers...
+Classifying using Majority Vote...
+	-- training error: 0.397
+	-- testing error: 0.434
+Classifying using Random...
+	-- training error: 0.517
+	-- testing error: 0.483
+Classifying using Decision Tree...
+	-- training error: 0.012
+	-- testing error: 0.245
+Classifying using k-Nearest Neighbors...
+	-- training error: 0.232
+	-- testing error: 0.336
